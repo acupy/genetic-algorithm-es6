@@ -2,10 +2,14 @@
   "name": "genetic-algorithm-es6",
   "version": "1.1.0",
   "description": "This package provides a framework for building applications where genetic algorithm (GA) is used for solving optimization problems based on a natural selection process that mimics biological evolution. The algorithm repeatedly modifies a population of individual solutions.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acupy/genetic-algorithm-es6.git"
+  },
+  "scripts": {
+    "build": "babel index.js --presets babel-preset-es2015 --out-dir dist",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "genetic",
@@ -20,5 +24,9 @@
   },
   "license": "MTI",
   "homepage": "https://github.com/acupy/genetic-algorithm-es6",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  }
 }
