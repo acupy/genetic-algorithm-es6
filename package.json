@@ -8,7 +8,7 @@
     "url": "git+https://github.com/acupy/genetic-algorithm-es6.git"
   },
   "scripts": {
-    "build": "babel index.js --presets babel-preset-es2015 --out-dir dist",
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
     "prepublish": "npm run build"
   },
   "keywords": [
