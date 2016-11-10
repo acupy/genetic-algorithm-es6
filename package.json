@@ -1,13 +1,8 @@
 {
   "name": "genetic-algorithm-es6",
   "version": "1.0.0",
-  "description": "This package provides a framework for building applications
-  where genetic algorithm (GA) is used for solving optimization problems based
-  on a natural selection process that mimics biological evolution. The algorithm
-  repeatedly modifies a population of individual solutions.",
+  "description": "This package provides a framework for building applications where genetic algorithm (GA) is used for solving optimization problems based on a natural selection process that mimics biological evolution. The algorithm repeatedly modifies a population of individual solutions.",
   "main": "index.js",
-  "scripts": {
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acupy/genetic-algorithm-es6.git"
@@ -25,5 +20,5 @@
   },
   "license": "MTI",
   "homepage": "https://github.com/acupy/genetic-algorithm-es6",
-  "readmeFilename": "README.md",
+  "readmeFilename": "README.md"
 }
