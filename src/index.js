@@ -5,15 +5,16 @@ export default class {
     fitnessFunction = (phenotype) => 0 ,
     isABetterThanBFunction = undefined,
     population = [],
-    populationSize = 100){
+    populationSize = 100,
+    chanceOfMutation = 50){
 
       this.mutationFunction = mutationFunction;
       this.crossoverFunction = crossoverFunction;
       this.fitnessFunction = fitnessFunction;
       this.isABetterThanBFunction = isABetterThanBFunction;
       this.population = population;
-      this.populationSize = 100;
-      this.chanceOfMutation = 50;
+      this.populationSize = populationSize;
+      this.chanceOfMutation = chanceOfMutation;
   }
 
   populate () {
