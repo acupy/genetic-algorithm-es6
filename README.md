@@ -15,3 +15,62 @@ The algorithm repeatedly modifies a population of individual solutions.
 npm install genetic-algorithm-fw
 
 ```
+
+## Functions to define
+
+#### mutation
+
+```js
+function mutation(oldPhenotype){
+  // return a new phenotype
+}
+```
+
+#### crossover
+
+```js
+function crossover (phenoTypeA, phenoTypeB) {
+    // using phenoTypeA and phenotypeB create a new list of two phenoTypes
+    // return [phenotype1, phenotype2]
+}
+```
+#### fitness
+
+```js
+fitness(phenotype) {
+  // return the fitness number
+  // the higher the value the fitter it is
+}
+```
+#### competition
+```js
+competition(phenoTypeA, phenoTypeB) {
+    // return true when the fitness value is higher for phenoTypeA
+    // otherwise return false
+}
+```
+
+## Initialize GA object with the previously defined functions
+```js
+var GeneticAlgorithm = require('genetic-algorithm-fw');
+
+var geneticalgorithm = new GeneticAlgorithm(
+  mutation, // if not specified, no mutation happens
+  crossover, // if not specified, the initial phenoTypes are returned
+  fitness, // if not specified, 0 is returned
+  competition, // if not specified, no competition happens
+  [], // initial list of phenoTypes
+  populationSize, // by defualt it is 100
+  chanceOfMutation); // by defautlt it is 50
+```
+## Evolve our population
+```js
+// we can run as many iterations as we like
+geneticalgorithm.evolve();
+```
+
+## Get the best result
+```js
+// we can check the best phenotype in our current population
+var theBestPhenotype = geneticalgorithm.best();
+```
