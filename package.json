@@ -1,6 +1,6 @@
 {
   "name": "genetic-algorithm-fw",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "This package provides a framework for building applications where genetic algorithm (GA) is used for solving optimization problems based on a natural selection process that mimics biological evolution.",
   "main": "./dist/index.js",
   "repository": {
