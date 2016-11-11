@@ -22,7 +22,7 @@
   "author": {
     "name": "Adam Czuprak"
   },
-  "license": "MTI",
+  "license": "MIT",
   "homepage": "https://github.com/acupy/genetic-algorithm-es6",
   "readmeFilename": "README.md",
   "devDependencies": {
