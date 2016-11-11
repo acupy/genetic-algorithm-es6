@@ -1,4 +1,4 @@
-# Genetic algorithm framework with JavaScript ES6
+# Genetic algorithm framework built with JavaScript ES6
 
 [![Build Status](https://travis-ci.org/acupy/genetic-algorithm-es6.svg?branch=master)](https://travis-ci.org/acupy/genetic-algorithm-es6)
 
@@ -37,14 +37,14 @@ function crossover (phenoTypeA, phenoTypeB) {
 #### fitness
 
 ```js
-fitness(phenotype) {
+function fitness(phenotype) {
   // return the fitness number
   // the higher the value the fitter it is
 }
 ```
 #### competition
 ```js
-competition(phenoTypeA, phenoTypeB) {
+function competition(phenoTypeA, phenoTypeB) {
     // return true when the fitness value is higher for phenoTypeA
     // otherwise return false
 }
