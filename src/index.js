@@ -18,6 +18,7 @@ export default class {
   }
 
   populate () {
+
       var size = this.population.length;
       while( this.population.length < this.populationSize ) {
           this.population.push(
@@ -35,7 +36,7 @@ export default class {
   crossover(phenotype) {
     var randomIndex = Math.floor(Math.random() * this.population.length);
     var matePhenotype = this.population[randomIndex];
-    return this.crossoverFunction(phenotype, matePhenotype)[0];
+    return this.crossoverFunction(phenotype, matePhenotype);
   }
 
   isABetterThanB(a,b) {
@@ -49,19 +50,20 @@ export default class {
   compete() {
       var nextGeneration = [];
 
-      for( var p = 0 ; p < this.population.length - 1 ; p+=2 ) {
-          var phenotype = this.population[p];
-          var competitor = this.population[p+1];
+      for( var p = 0 ; p < this.population.length - 1 ; p += 2 ) {
+          var competitorA = this.population[p];
+          var competitorB = this.population[p+1];
+          var dominant = this.isABetterThanB( competitorA , competitorB ) ? competitorA : competitorB;
 
-          if ( this.isABetterThanB( phenotype , competitor )) {
-              if ( Math.random() < this.chanceOfMutation / 100 ) {
-                  nextGeneration.push(this.mutate(phenotype));
-              } else {
-                  nextGeneration.push(this.crossover(phenotype));
-              }
-          } else {
-              nextGeneration.push(competitor);
-          }
+          var children = this.crossover(dominant);
+          var children = children.map((child) => {
+            if ( Math.random() < this.chanceOfMutation / 100 ) {
+              return this.mutate(child);
+            }
+            return child;
+          }, this);
+
+          nextGeneration.push(...children);
       }
 
       this.population = nextGeneration;
@@ -78,8 +80,13 @@ export default class {
   }
 
   evolve() {
+    // Only runs when we do not have enough pehotypes in our population
     this.populate();
+
+    // Mix the phenotypes, so we can iterate through them at random
     this.mixPopulationOrder();
+
+    // Populate the new generation
     this.compete();
   }
 
