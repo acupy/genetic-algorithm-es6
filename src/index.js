@@ -6,15 +6,15 @@ export default class {
     isABetterThanBFunction = undefined,
     population = [],
     populationSize = 100,
-    chanceOfMutation = 50){
+    chanceOfMutation = 50
 
-      this.mutationFunction = mutationFunction;
-      this.crossoverFunction = crossoverFunction;
-      this.fitnessFunction = fitnessFunction;
-      this.isABetterThanBFunction = isABetterThanBFunction;
-      this.population = population;
-      this.populationSize = populationSize;
-      this.chanceOfMutation = chanceOfMutation;
+    this.mutationFunction = mutationFunction;
+    this.crossoverFunction = crossoverFunction;
+    this.fitnessFunction = fitnessFunction;
+    this.isABetterThanBFunction = isABetterThanBFunction;
+    this.population = population;
+    this.populationSize = populationSize;
+    this.chanceOfMutation = chanceOfMutation;
   }
 
   populate () {
