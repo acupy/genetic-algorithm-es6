@@ -1,6 +1,7 @@
 # Genetic algorithm framework built with JavaScript ES6
 
-[![Build Status](https://travis-ci.org/nitin42/genetic-algorithm-es6.svg?branch=master)](https://travis-ci.org/nitin42/genetic-algorithm-es6)![coverage] (https://img.shields.io/badge/coverage-52.78%25-yellowgreen.svg)
+[![Build Status](https://travis-ci.org/nitin42/genetic-algorithm-es6.svg?branch=master)](https://travis-ci.org/nitin42/genetic-algorithm-es6)
+![coverage] (https://img.shields.io/badge/coverage-52.78%25-yellowgreen.svg)
 
 This package provides a framework for building applications where genetic algorithm (GA) is used for solving optimization problems based on a natural selection process that mimics biological evolution.
 
