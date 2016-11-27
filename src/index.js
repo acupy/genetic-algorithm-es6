@@ -80,7 +80,7 @@ export default class {
   }
 
   evolve() {
-    // Only runs when we do not have enough pehotypes in our populatio
+    // Only runs when we do not have enough pehotypes in our population
     this.populate();
 
     // Mix the phenotypes, so we can iterate through them at random
