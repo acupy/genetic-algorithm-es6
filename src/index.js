@@ -6,7 +6,7 @@ export default class {
     isABetterThanBFunction = undefined,
     population = [],
     populationSize = 100,
-    chanceOfMutation = 50
+    chanceOfMutation = 50) {
 
     this.mutationFunction = mutationFunction;
     this.crossoverFunction = crossoverFunction;
