@@ -3,7 +3,7 @@
 const chai = require('chai');
 const should = require('should');
 
-let GeneticClass = require('../index.js'); 
+let GeneticClass = require('../src/index.js'); 
 
 let ga = new GeneticClass();
 
