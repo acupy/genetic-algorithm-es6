@@ -1,4 +1,4 @@
-export default class {
+module.exports = class GeneticClass {
   constructor(
     mutationFunction = (phenotype) => phenotype,
     crossoverFunction = (a, b) => [a, b],
@@ -15,6 +15,15 @@ export default class {
       this.population = population;
       this.populationSize = populationSize;
       this.chanceOfMutation = chanceOfMutation;
+
+      this.populate = this.populate.bind(this);
+      this.mutate = this.mutate.bind(this);
+      this.crossover = this.crossover.bind(this);
+      this.isABetterThanB = this.isABetterThanB.bind(this);
+      this.compete = this.compete.bind(this);
+      this.mixPopulationOrder = this.mixPopulationOrder.bind(this);
+      this.evolve = this.evolve.bind(this);
+      this.best = this.best.bind(this);
   }
 
   populate () {
@@ -101,3 +110,4 @@ export default class {
     return theBest;
   }
 }
+
